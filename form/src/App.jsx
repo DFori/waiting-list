@@ -22,7 +22,7 @@ const WaitlistForm = () => {
 
   useEffect(() => {
     // Fetch current waitlist count
-    fetch("http://localhost:5000/api/waitlist/count")
+    fetch("http://127.0.0.1:5000/api/waitlist/count/")
       .then((res) => res.json())
       .then((data) => setWaitlistCount(data.count))
       .catch(console.error);
@@ -33,7 +33,7 @@ const WaitlistForm = () => {
     setStatus("loading");
 
     try {
-      const response = await fetch("http://localhost:5000/api/waitlist", {
+      const response = await fetch("http://127.0.0.1:5000/api/waitlist/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
