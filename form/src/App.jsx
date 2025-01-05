@@ -54,6 +54,7 @@ const WaitlistForm = () => {
         setStatus("error");
         setMessage(data.error || "Something went wrong. Please try again.");
       }
+    // eslint-disable-next-line no-unused-vars
     } catch (error) {
       setStatus("error");
       setMessage("Unable to connect to server. Please try again later.");
@@ -61,7 +62,7 @@ const WaitlistForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-400 to-gray-100 flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -79,9 +80,9 @@ const WaitlistForm = () => {
               }}
             >
               <div className="flex items-center justify-center mb-4">
-                <Sparkles className="w-10 h-10 text-purple-500" />
+                <Sparkles className="w-10 h-10 text-gray-500" />
               </div>
-              <CardTitle className="text-2xl text-center bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <CardTitle className="text-2xl text-center bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent">
                 Join the Waitlist
               </CardTitle>
             </motion.div>
@@ -163,7 +164,7 @@ const WaitlistForm = () => {
               >
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                  className="w-full bg-gradient-to-r from-gray-600 to-gray-600 hover:from-gray-400 hover:to-gray-700 transition-all duration-200"
                   disabled={status === "loading"}
                 >
                   {status === "loading" ? "Joining..." : "Join Waitlist"}
